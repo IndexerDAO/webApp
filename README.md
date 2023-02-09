@@ -1,4 +1,4 @@
-# GraphAdvocates Web App
+# IndexerDAO Web App
 
 ## How To Contribute
 
