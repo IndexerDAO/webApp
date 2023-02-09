@@ -673,6 +673,21 @@ function App() {
     <div className="App">
       {/* ✏️ Edit the header and change the title to your project name */}
       <Header />
+	  
+	  <div>
+		/*Insert new deisgn */
+	  </div>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
       {/* {networkDisplay} */}
       {/* <BrowserRouter>
         <Menu style={{ textAlign: "center" }} selectedKeys={[route]} mode="horizontal">
