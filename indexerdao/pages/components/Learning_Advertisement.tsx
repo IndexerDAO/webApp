@@ -120,7 +120,7 @@ export default function Learning_Advertisement() {
                         width={"full"}
                         overflow={"hidden"}
                     >
-                        <IconButton
+                        {/* <IconButton
                             aria-label={"Play Button"}
                             variant={"ghost"}
                             _hover={{ bg: "transparent" }}
@@ -131,15 +131,18 @@ export default function Learning_Advertisement() {
                             left={"50%"}
                             top={"50%"}
                             transform={"translateX(-50%) translateY(-50%)"}
-                        />
-                        <Image
+                        /> */}
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/UiZz2Lqj3Go" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                        
+                        {/* <Image
                             alt={"tutorial cover"}
                             fit={"cover"}
                             align={"center"}
                             w={"100%"}
                             h={"100%"}
                             src={"assets/videoImg_sample.PNG"}
-                        />
+                        /> */}
                     </Box>
                 </Flex>
             </Stack>

@@ -6,6 +6,7 @@ import { Container, Divider, Flex } from "@chakra-ui/react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Learning_Advertisement from "./components/Learning_Advertisement";
+import Team from "./components/Team";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +29,7 @@ export default function Home() {
             <Header />
             <Learning_Advertisement />
 
-            <Container maxW={"5xl"} alignContent="center" pb={2}>
+            <Container maxW={"5xl"} alignContent="center" pb={2} mb={6}>
                 <Flex justify="center">
                     <div className={styles.grid}>
                         <a
@@ -91,6 +92,8 @@ export default function Home() {
                 </Flex>
             </Container>
 
+            <Team/>
+            <Divider color={"gray.300"}/>
             <Footer />
         </>
     );
