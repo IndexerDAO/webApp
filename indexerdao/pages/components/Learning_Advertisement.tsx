@@ -51,12 +51,13 @@ export default function Learning_Advertisement() {
                 <Stack flex={1} spacing={{ base: 5, md: 10 }}>
                     <Heading
                         lineHeight={1.1}
-                        fontWeight={600}
+                        fontWeight={500}
                         fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
                     >
                         <Text
                             as={"span"}
                             position={"relative"}
+                            fontFamily="Inter"
                             _after={{
                                 content: "''",
                                 width: "full",
@@ -72,7 +73,7 @@ export default function Learning_Advertisement() {
                         </Text>
                         <br />
                         <Text as={"span"} color={"#1A365D"}>
-                            Enroll Today
+                            Enroll Today!
                         </Text>
                     </Heading>
                     <Text color={"gray.500"}>

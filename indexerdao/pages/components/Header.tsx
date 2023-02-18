@@ -15,6 +15,7 @@ import {
     useDisclosure,
     useColorModeValue,
     Stack,
+    Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 
@@ -40,7 +41,7 @@ export default function Header() {
 
     return (
         <>
-            <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+            <Box bg={useColorModeValue("#1A365D", "gray.700")} px={10}>
                 <Flex
                     h={16}
                     alignItems={"center"}
@@ -54,7 +55,15 @@ export default function Header() {
                         onClick={isOpen ? onClose : onOpen}
                     />
                     <HStack spacing={8} alignItems={"center"}>
-                        <Box>IndexerDAO</Box>
+                    <Image
+                            alt={"Logo"}
+                            fit={"cover"}
+                            align={"center"}
+                            w={"240px"}
+                            h={"100%"}
+                            p={1}
+                            src={"assets/ID_logo2.png"}
+                        />
                     </HStack>
 
                     <Flex alignItems={"center"}>

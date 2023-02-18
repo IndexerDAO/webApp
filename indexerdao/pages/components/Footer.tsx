@@ -9,7 +9,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { ReactNode } from "react";
 
@@ -79,16 +79,16 @@ export default function Footer() {
                 justify={"center"}
                 align={"center"}
             >
-                <Text>Lets Connect!</Text>
+                <Text fontFamily={"Inter"} fontSize="30px">Lets Connect!</Text>
                 <Stack direction={"row"} spacing={6}>
-                    <SocialButton label={"Twitter"} href={"#"}>
-                        <FaTwitter />
+                    <SocialButton label={"Twitter"} href={"https://twitter.com/IndexerDAO"}>
+                        <FaTwitter size={"60px"}/>
                     </SocialButton>
-                    <SocialButton label={"YouTube"} href={"#"}>
-                        <FaYoutube />
+                    <SocialButton label={"YouTube"} href={"https://www.youtube.com/@indexerdao"}>
+                        <FaYoutube size={"60px"}/>
                     </SocialButton>
-                    <SocialButton label={"Instagram"} href={"#"}>
-                        <FaInstagram />
+                    <SocialButton label={"Github"} href={"https://github.com/IndexerDAO"}>
+                        <FaGithub size={"60px"}/>
                     </SocialButton>
                 </Stack>
             </Container>

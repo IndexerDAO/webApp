@@ -28,67 +28,68 @@ export default function Home() {
             <Header />
             <Learning_Advertisement />
 
-            <Flex align="center">
-                <div className={styles.grid}>
-                    <a
-                        href="#"
-                        className={styles.card}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <h2 className={inter.className}>
-                            Docs <span>-&gt;</span>
-                        </h2>
-                        <p className={inter.className}>
-                            Find in-depth information about Indexing
-                        </p>
-                    </a>
+            <Container maxW={"5xl"} alignContent="center" pb={2}>
+                <Flex justify="center">
+                    <div className={styles.grid}>
+                        <a
+                            href="#"
+                            className={styles.card}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <h2 className={inter.className}>
+                                Docs <span>-&gt;</span>
+                            </h2>
+                            <p className={inter.className}>
+                                Find in-depth information about Indexing
+                            </p>
+                        </a>
 
-                    <a
-                        href="#"
-                        className={styles.card}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <h2 className={inter.className}>
-                            Learn <span>-&gt;</span>
-                        </h2>
-                        <p className={inter.className}>
-                            Learn about Indexing in our interactive course
-                            with&nbsp;quizzes!
-                        </p>
-                    </a>
+                        <a
+                            href="#"
+                            className={styles.card}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <h2 className={inter.className}>
+                                Learn <span>-&gt;</span>
+                            </h2>
+                            <p className={inter.className}>
+                                Learn about Indexing in our interactive course
+                                with&nbsp;quizzes!
+                            </p>
+                        </a>
 
-                    <a
-                        href="#"
-                        className={styles.card}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <h2 className={inter.className}>
-                            Get Started <span>-&gt;</span>
-                        </h2>
-                        <p className={inter.className}>
-                            Discover new subraphs that need to be indexed.
-                        </p>
-                    </a>
+                        <a
+                            href="#"
+                            className={styles.card}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <h2 className={inter.className}>
+                                Get Started <span>-&gt;</span>
+                            </h2>
+                            <p className={inter.className}>
+                                Discover new subraphs that need to be indexed.
+                            </p>
+                        </a>
 
-                    <a
-                        href="#"
-                        className={styles.card}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <h2 className={inter.className}>
-                            Deploy <span>-&gt;</span>
-                        </h2>
-                        <p className={inter.className}>
-                            Learn to deploy hardware optimized for indexing
-                        </p>
-                    </a>
-                </div>
-            </Flex>
-
+                        <a
+                            href="#"
+                            className={styles.card}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <h2 className={inter.className}>
+                                Deploy <span>-&gt;</span>
+                            </h2>
+                            <p className={inter.className}>
+                                Learn to deploy hardware optimized for indexing
+                            </p>
+                        </a>
+                    </div>
+                </Flex>
+            </Container>
 
             <Footer />
         </>
