@@ -109,11 +109,14 @@ export default function Footer() {
                     align={{ base: "center", md: "center" }}
                 >
                     <Button
+                            as={Link}
                             variant={"solid"}
                             colorScheme={"teal"}
                             size={"sm"}
                             leftIcon={<FaReact/>}
                             rightIcon={<FaReact/>}
+                            href={"https://thegraph.com/explorer/profile/0x223260f3ca014adc40c98d50d5c4178657d53e26"}
+                            isExternal
                         >
                             Delegate with us
                         </Button>

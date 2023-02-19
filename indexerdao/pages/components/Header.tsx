@@ -19,9 +19,18 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 
-const Links = ["Home", "Guides", "Team"];
+const Links: NavLink_i[] = [
+    { disp: "Home", linkto: "/" },
+    { disp: "Guides", linkto: "#" },
+    { disp: "About", linkto: "/about" },
+];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+interface NavLink_i {
+    disp: string;
+    linkto: string;
+}
+
+const NavLink = ({ disp, linkto }: NavLink_i) => (
     <Link
         px={2}
         py={1}
@@ -29,11 +38,12 @@ const NavLink = ({ children }: { children: ReactNode }) => (
         color={"gray.50"}
         _hover={{
             textDecoration: "none",
+            color: "black",
             bg: useColorModeValue("gray.200", "gray.700"),
         }}
-        href={"#"}
+        href={linkto}
     >
-        {children}
+        {disp}
     </Link>
 );
 
@@ -56,7 +66,7 @@ export default function Header() {
                         onClick={isOpen ? onClose : onOpen}
                     />
                     <HStack spacing={8} alignItems={"center"}>
-                    <Image
+                        <Image
                             alt={"Logo"}
                             fit={"cover"}
                             align={"center"}
@@ -74,7 +84,10 @@ export default function Header() {
                             display={{ base: "none", md: "flex" }}
                         >
                             {Links.map((link) => (
-                                <NavLink key={link}>{link}</NavLink>
+                                <NavLink key={link.disp}
+                                        disp = {link.disp}
+                                        linkto = {link.linkto}
+                                />
                             ))}
                         </HStack>
                         {/* <Button
@@ -114,7 +127,10 @@ export default function Header() {
                     <Box pb={4} display={{ md: "none" }}>
                         <Stack as={"nav"} spacing={4}>
                             {Links.map((link) => (
-                                <NavLink key={link}>{link}</NavLink>
+                                <NavLink key={link.disp}
+                                    disp = {link.disp}
+                                    linkto = {link.linkto}
+                                />
                             ))}
                         </Stack>
                     </Box>
