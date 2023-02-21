@@ -33,7 +33,7 @@ export default function Home() {
                 <Flex justify="center">
                     <div className={styles.grid}>
                         <a
-                            href="#"
+                            href="https://indexdao.gitbook.io/indexerdao/"
                             className={styles.card}
                             target="_blank"
                             rel="noopener noreferrer"
