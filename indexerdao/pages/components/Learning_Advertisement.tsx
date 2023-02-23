@@ -114,10 +114,10 @@ export default function Learning_Advertisement() {
                     />
                     <Box
                         position={"relative"}
-                        height={"300px"}
+                        height={"310px"}
                         rounded={"2xl"}
                         boxShadow={"2xl"}
-                        width={"600px"}
+                        width={"full"}
                         overflow={"hidden"}
                     >
                         {/* <IconButton
@@ -133,7 +133,7 @@ export default function Learning_Advertisement() {
                             transform={"translateX(-50%) translateY(-50%)"}
                         /> */}
 
-                        <iframe width="610" height="300" src="https://www.youtube.com/embed/UiZz2Lqj3Go" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                        <iframe width="600" height="310" src="https://www.youtube.com/embed/UiZz2Lqj3Go" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                         
                         {/* <Image
                             alt={"tutorial cover"}
