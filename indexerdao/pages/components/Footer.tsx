@@ -49,7 +49,7 @@ const SocialButton = ({
             w={8}
             h={8}
             cursor={"pointer"}
-            as={"a"}
+            as={Link}
             href={href}
             display={"inline-flex"}
             alignItems={"center"}
@@ -58,6 +58,7 @@ const SocialButton = ({
             _hover={{
                 bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
             }}
+            isExternal
         >
             <VisuallyHidden>{label}</VisuallyHidden>
             {children}
