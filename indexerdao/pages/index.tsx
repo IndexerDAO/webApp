@@ -47,7 +47,7 @@ export default function Home() {
                         </a>
 
                         <a
-                            href="#"
+                            href="https://indexing101.indexerdao.com/"
                             className={styles.card}
                             target="_blank"
                             rel="noopener noreferrer"
