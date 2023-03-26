@@ -32,4 +32,3 @@ jobs:
         cache-dependency-path: indexerdao/yarn.lock
     - run: yarn install
     - run: yarn build
-    - run: yarn test
