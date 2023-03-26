@@ -40,9 +40,8 @@ export default function Home() {
                 Find in-depth information about Indexing
               </p>
             </a>
-
             <a
-              href="#"
+              href="https://indexing101.indexerdao.com/"
               className={styles.card}
               target="_blank"
               rel="noopener noreferrer"
