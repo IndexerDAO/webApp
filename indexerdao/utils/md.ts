@@ -1,9 +1,9 @@
 // import fs from "fs";
 // import path from "path";
 // import matter from "gray-matter";
-// export const getPath = (folder: string) => {
-//   return path.join(process.cwd(), `/${folder}`); // Get full path
-// };
+export const getPath = (folder: string) => {
+  //   return path.join(process.cwd(), `/${folder}`); // Get full path
+};
 // export const getFileContent = (filename: string, folder: string) => {
 //   const POSTS_PATH = getPath(folder);
 //   return fs.readFileSync(path.join(POSTS_PATH, filename), "utf8");
