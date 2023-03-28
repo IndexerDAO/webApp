@@ -23,6 +23,7 @@ import { HamburgerIcon, CloseIcon, AddIcon, MoonIcon } from "@chakra-ui/icons";
 const Links: NavLink_i[] = [
   { disp: "Home", linkto: "/" },
   { disp: "Guides", linkto: "#" },
+  { disp: "About", linkto: "/about" },
 ];
 
 interface NavLink_i {
