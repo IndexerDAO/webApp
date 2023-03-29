@@ -6,7 +6,7 @@ import {
   HStack,
   Link,
   IconButton,
-  Button,
+  Text,
   Menu,
   MenuButton,
   MenuList,
@@ -17,12 +17,14 @@ import {
   Stack,
   Image,
   useColorMode,
+  VStack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon, MoonIcon } from "@chakra-ui/icons";
+import { FiChevronDown } from "react-icons/fi";
 
 const Links: NavLink_i[] = [
   { disp: "Home", linkto: "/" },
-  { disp: "Guides", linkto: "#" },
+  { disp: "Learn", linkto: "/learn" },
   { disp: "About", linkto: "/about" },
 ];
 
@@ -48,7 +50,11 @@ const NavLink = ({ disp, linkto }: NavLink_i) => (
   </Link>
 );
 
-export default function Header() {
+interface Props {
+  showLogin?: Boolean;
+}
+
+export default function Header(props: Props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -90,13 +96,45 @@ export default function Header() {
                   linkto={link.linkto}
                 />
               ))}
+
+              <IconButton
+                variant={"ghost"}
+                aria-label="Toggle Dark Mode"
+                icon={<MoonIcon />}
+                onClick={toggleColorMode}
+              />
+
+              {props.showLogin && (
+                <Flex alignItems={"center"}>
+                  <Menu>
+                    <MenuButton
+                      py={2}
+                      transition="all 0.3s"
+                      _focus={{ boxShadow: "none" }}
+                    >
+                      <HStack>
+                        <Avatar
+                          size={"sm"}
+                          src={"/assets/teamprofile/BrainFried.jpg"}
+                        />
+                        <Box display={{ base: "none", md: "flex" }}>
+                          <FiChevronDown />
+                        </Box>
+                      </HStack>
+                    </MenuButton>
+                    <MenuList
+                      bg={useColorModeValue("white", "gray.900")}
+                      borderColor={useColorModeValue("gray.200", "gray.700")}
+                    >
+                      <MenuItem>Profile</MenuItem>
+                      <MenuDivider />
+                      <MenuItem>Sign out</MenuItem>
+                    </MenuList>
+                  </Menu>
+                </Flex>
+              )}
             </HStack>
-            <IconButton
-              variant={"ghost"}
-              aria-label="Toggle Dark Mode"
-              icon={<MoonIcon />}
-              onClick={toggleColorMode}
-            />
+
             {/* <Button
                             variant={"solid"}
                             colorScheme={"teal"}
