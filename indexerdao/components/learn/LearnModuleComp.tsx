@@ -82,8 +82,8 @@ export default function LearnModuleComp() {
       spacingX="20px"
       spacingY="25px"
     >
-      {dummyData.map((data) => {
-        return <LearnModuleItem />;
+      {dummyData.map((data, key) => {
+        return <LearnModuleItem key={key} />;
       })}
     </SimpleGrid>
   );

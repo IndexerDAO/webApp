@@ -8,6 +8,7 @@ import {
   Center,
   useColorModeValue,
   HStack,
+  Link,
 } from "@chakra-ui/react";
 import { BsArrowUpRight, BsHeartFill, BsHeart } from "react-icons/bs";
 
@@ -69,9 +70,13 @@ export default function LearnModuleItem() {
             cursor={"pointer"}
             w="full"
           >
-            <Text fontSize={"md"} fontWeight={"semibold"}>
-              View more
-            </Text>
+            <Link
+              href="IndexerDAO/Indexing101/README.md"
+              fontSize={"md"}
+              fontWeight={"semibold"}
+            >
+              View Lesson
+            </Link>
             <BsArrowUpRight />
           </Flex>
           <Flex

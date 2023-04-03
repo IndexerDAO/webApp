@@ -22,6 +22,7 @@ import {
   MenuItem,
   MenuList,
   Button,
+  Spacer,
 } from "@chakra-ui/react";
 import {
   FiHome,
@@ -53,28 +54,33 @@ export default function LearnLayoutComp({ children }: { children: ReactNode }) {
   return (
     <Box minH={"100vh"} bg={useColorModeValue("gray.100", "gray.900")}>
       <Header showLogin={true} />
-      <SidebarContent
-        onClose={() => onClose}
-        display={{ base: "none", md: "block" }}
-      />
-      <Drawer
-        autoFocus={false}
-        isOpen={isOpen}
-        placement="left"
-        onClose={onClose}
-        returnFocusOnClose={false}
-        onOverlayClick={onClose}
-        size="full"
-      >
-        <DrawerContent>
-          <SidebarContent onClose={onClose} />
-        </DrawerContent>
-      </Drawer>
-      {/* mobilenav */}
-      <MobileNav onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 60 }} p="4">
-        {children}
-      </Box>
+      {/* <Flex bg={"green.500"}> */}
+
+      <Flex>
+        <SidebarContent
+          onClose={() => onClose}
+          display={{ base: "none", md: "block" }}
+        />
+        <Drawer
+          autoFocus={false}
+          isOpen={isOpen}
+          placement="left"
+          onClose={onClose}
+          returnFocusOnClose={false}
+          onOverlayClick={onClose}
+          size="full"
+        >
+          <DrawerContent>
+            <SidebarContent onClose={onClose} />
+          </DrawerContent>
+        </Drawer>
+
+        <VStack w={"100%"}>
+          {/* mobilenav */}
+          <MobileNav onOpen={onOpen} />
+          <Box p="4">{children}</Box>
+        </VStack>
+      </Flex>
     </Box>
   );
 }
@@ -85,14 +91,13 @@ interface SidebarProps extends BoxProps {
 
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   return (
-    <Box
+    <Flex
       transition="3s ease"
       bg={useColorModeValue("white", "gray.900")}
       borderRight="1px"
       borderRightColor={useColorModeValue("gray.200", "gray.700")}
       w={{ base: "full", md: 60 }}
-      //pos="fixed"
-      h="100vh"
+      flexDirection={"column"}
       {...rest}
     >
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
@@ -106,7 +111,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
           {link.name}
         </NavItem>
       ))}
-    </Box>
+    </Flex>
   );
 };
 
@@ -154,7 +159,6 @@ interface MobileProps extends FlexProps {
 const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
   return (
     <Flex
-      ml={{ base: 0, md: 60 }}
       px={{ base: 4, md: 4 }}
       height="20"
       alignItems="center"
@@ -162,6 +166,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       borderBottomWidth="1px"
       borderBottomColor={useColorModeValue("gray.200", "gray.700")}
       justifyContent={{ base: "space-between", md: "flex-end" }}
+      w={"100%"}
       {...rest}
     >
       <IconButton
@@ -171,6 +176,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         aria-label="open menu"
         icon={<FiMenu />}
       />
+      <Spacer />
     </Flex>
   );
 };

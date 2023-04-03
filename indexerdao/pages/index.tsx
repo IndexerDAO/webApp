@@ -1,14 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import { Container, Divider, Flex } from "@chakra-ui/react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Learning_Advertisement from "../components/Learning_Advertisement";
 import Team from "../components/Team";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -32,12 +28,10 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2 className={inter.className}>
+              <h2>
                 Docs <span>-&gt;</span>
               </h2>
-              <p className={inter.className}>
-                Find in-depth information about Indexing
-              </p>
+              <p>Find in-depth information about Indexing</p>
             </a>
             <a
               href="https://indexing101.indexerdao.com/"
@@ -45,10 +39,10 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2 className={inter.className}>
+              <h2>
                 Learn <span>-&gt;</span>
               </h2>
-              <p className={inter.className}>
+              <p>
                 Learn about Indexing in our interactive course
                 with&nbsp;quizzes!
               </p>
@@ -60,12 +54,10 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2 className={inter.className}>
+              <h2>
                 Get Started <span>-&gt;</span>
               </h2>
-              <p className={inter.className}>
-                Discover new subraphs that need to be indexed.
-              </p>
+              <p>Discover new subraphs that need to be indexed.</p>
             </a>
 
             <a
@@ -74,12 +66,10 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2 className={inter.className}>
+              <h2>
                 Deploy <span>-&gt;</span>
               </h2>
-              <p className={inter.className}>
-                Learn to deploy hardware optimized for indexing
-              </p>
+              <p>Learn to deploy hardware optimized for indexing</p>
             </a>
           </div>
         </Flex>
