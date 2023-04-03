@@ -1,4 +1,4 @@
-import {
+import React, {
   useReducer,
   createContext,
   useContext,
@@ -62,6 +62,7 @@ const sideBarReducer = produce(
 );
 
 const SideBarProvider: React.FC<{
+  children: React.ReactNode;
   config: StatefulNodes;
   treePath: readonly number[];
 }> = ({ children, config, treePath }) => {

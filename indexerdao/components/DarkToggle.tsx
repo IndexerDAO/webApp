@@ -6,21 +6,20 @@ import React, {
   SetStateAction,
   useState,
 } from "react";
-import DarkModeToggle from "react-dark-mode-toggle";
+// import DarkModeToggle from "react-dark-mode-toggle";
 
 const DarkToggleContext = createContext<
-  | [boolean, Dispatch<SetStateAction<boolean>>]
-  | undefined
+  [boolean, Dispatch<SetStateAction<boolean>>] | undefined
 >(undefined);
 
-export const DarkProvider: React.FC = ({ children }) => {
-  const [dark, setDark] = useState<boolean>(false);
-  return (
-    <DarkToggleContext.Provider value={[dark, setDark]}>
-      {children}
-    </DarkToggleContext.Provider>
-  );
-};
+// export const DarkProvider: React.FC = ({ children }) => {
+//   const [dark, setDark] = useState<boolean>(false);
+//   return (
+//     <DarkToggleContext.Provider value={[dark, setDark]}>
+//       {children}
+//     </DarkToggleContext.Provider>
+//   );
+// };
 
 export function useDarkToggle() {
   const context = useContext(DarkToggleContext);
@@ -38,7 +37,7 @@ export default function DarkToggle() {
   }, [isDarkMode]);
   return (
     <div className="flex flex-col justify-center">
-      <DarkModeToggle onChange={setIsDarkMode} checked={isDarkMode} size={60} />
+      {/* <DarkModeToggle onChange={setIsDarkMode} checked={isDarkMode} size={60} /> */}
     </div>
   );
 }

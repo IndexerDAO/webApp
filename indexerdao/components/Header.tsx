@@ -57,6 +57,8 @@ interface Props {
 export default function Header(props: Props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
+  const color1 = useColorModeValue("white", "gray.900");
+  const color2 = useColorModeValue("gray.200", "gray.700");
 
   return (
     <>
@@ -122,10 +124,7 @@ export default function Header(props: Props) {
                         </Box>
                       </HStack>
                     </MenuButton>
-                    <MenuList
-                      bg={useColorModeValue("white", "gray.900")}
-                      borderColor={useColorModeValue("gray.200", "gray.700")}
-                    >
+                    <MenuList bg={color1} borderColor={color2}>
                       <MenuItem>Profile</MenuItem>
                       <MenuDivider />
                       <MenuItem>Sign out</MenuItem>

@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { useSideBarState, useSideBarDispatch } from "./SideBarContext";
 import RenderNode from "./RenderNode";
-import MenuIcon from "@material-ui/icons/Menu";
-import SideBarTop from "./SideBarTop";
 import { HeadersConfig } from "../../bookConfig";
 import DoubleChevron from "./DoubleChevron";
 import Link from "next/link";
 
 const SideBar: React.FC<{
+  children: React.ReactNode;
   ghUrl: string;
   treePath: readonly number[];
   headings: HeadersConfig;
@@ -70,8 +69,8 @@ const SideBar: React.FC<{
         >
           <div className=" w-48 h-screen fixed md:sticky top-0 right-0 bg-gray-100 overflow-y-auto z-10 dark:bg-black dark:scrollbar-thumb-gray-700 scrollbar-thumb-gray-300 scrollbar-track-gray-200 scrollbar-thin dark:scrollbar-track-gray-500 dark:scrollbar-blue-700">
             <div className=" mx-3 mt-8 mb-10">
-              {headings.map((heading) => (
-                <div className={heading.depth == 3 ? "ml-3" : ""}>
+              {headings.map((heading, index) => (
+                <div key={index} className={heading.depth == 3 ? "ml-3" : ""}>
                   <a
                     href={"#" + heading.slug}
                     className="my-3 block text-xs font-light dark:text-gray-300"
