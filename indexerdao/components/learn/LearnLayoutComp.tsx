@@ -25,11 +25,6 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 import {
-  FiHome,
-  FiTrendingUp,
-  FiCompass,
-  FiStar,
-  FiSettings,
   FiMenu,
   FiBookOpen,
   FiBook,
@@ -37,7 +32,7 @@ import {
 } from "react-icons/fi";
 import { IconType } from "react-icons";
 import { ReactText } from "react";
-import Header from "../Header";
+import Header from "@/components/Header";
 
 interface LinkItemProps {
   name: string;
@@ -52,6 +47,7 @@ const LinkItems: Array<LinkItemProps> = [
 export default function LearnLayoutComp({ children }: { children: ReactNode }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
+    <>
     <Box minH={"100vh"} bg={useColorModeValue("gray.100", "gray.900")}>
       <Header showLogin={true} />
       {/* <Flex bg={"green.500"}> */}
@@ -82,6 +78,7 @@ export default function LearnLayoutComp({ children }: { children: ReactNode }) {
         </VStack>
       </Flex>
     </Box>
+    </>
   );
 }
 

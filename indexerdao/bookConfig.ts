@@ -47,7 +47,8 @@ const headersFunction: UserFunction = ({ treeNode, mdast, frontMatter }) => {
 
 (async () => {
   const awsTree = await summaryToUrlTree({
-    url: "https://github.com/dylviz/site/blob/main/README.md",
+    // url: "https://github.com/dylviz/site/blob/main/README.md",
+    url: "https://github.com/IndexerDAO/Indexing101/blob/main/SUMMARY.md",
     userFunction: headersFunction,
   });
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   Box,
   Heading,
@@ -12,15 +12,22 @@ import {
 } from "@chakra-ui/react";
 import { BsArrowUpRight, BsHeartFill, BsHeart } from "react-icons/bs";
 
-export default function LearnModuleItem() {
+export interface ModuleProps {
+  title: string;
+  text: string;
+  img: React.ReactNode;
+  link: string;
+  covertag: string;
+}
+
+export function LearnModuleItem(props : ModuleProps) {
   const [liked, setLiked] = useState(false);
 
   return (
     <Center py={6}>
       <Box
-        w="xs"
-        rounded={"sm"}
-        // my={5}
+        w="md"
+        rounded={"md"}
         mx={[0, 5]}
         overflow={"hidden"}
         bg="white"
@@ -28,18 +35,9 @@ export default function LearnModuleItem() {
         borderColor="black"
         boxShadow={useColorModeValue("6px 6px 0 black", "6px 6px 0 cyan")}
       >
-        <Box h={"105px"} borderBottom={"1px"} borderColor="black">
-          <Img
-            src={
-              "https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-            }
-            roundedTop={"sm"}
-            objectFit="cover"
-            // h="full"
-            w="full"
-            alt={"Blog Image"}
-          />
-        </Box>
+        <Flex h={"105px"} borderBottom={"1px"} borderColor="black" justifyContent={"center"}>
+          {props.img}
+        </Flex>
         <Box p={4}>
           <Box
             bg="black"
@@ -50,15 +48,14 @@ export default function LearnModuleItem() {
             mb={2}
           >
             <Text fontSize={"xs"} fontWeight="medium">
-              React
+              {props.covertag}
             </Text>
           </Box>
           <Heading color={"black"} fontSize={"2xl"} noOfLines={1}>
-            React v18.0
+            {props.title}
           </Heading>
           <Text color={"gray.500"} noOfLines={2}>
-            In this post, we will give an overview of what is new in React 18,
-            and what it means for the future.
+            {props.text}
           </Text>
         </Box>
         <HStack borderTop={"1px"} color="black">
@@ -71,7 +68,7 @@ export default function LearnModuleItem() {
             w="full"
           >
             <Link
-              href="IndexerDAO/Indexing101/README.md"
+              href={props.link}
               fontSize={"md"}
               fontWeight={"semibold"}
             >

@@ -10,21 +10,26 @@ import ReactMarkdown from 'react-markdown';
 import withNextImages from '../remark/withNextImages'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
+import Header from "@/components/Header";
 
 function Post({ urlTree, mdxSource, ghUrl, treePath, prevNext, headings }) {
   return (
-    <SideBarProvider config={urlTree.children}>
-      <SideBar ghUrl={ghUrl} treePath={treePath} headings={headings}>
-        <div className="my-5 px-8 pt-5 pb-2 bg-white shadow-md dark:bg-gray-900 rounded-xl max-w-2xl">
-          {/* <div className="prose dark:prose-dark"> */}
-          <MDXRemote {...mdxSource} />
-          {/* <ReactMarkdown remarkPlugins={[withNextImages, slug]} children={content}/> */}
-          {/* </div> */}
-          {/* <div className="prose dark:prose-dark">{content}</div> */}
-          <Cards prevNext={prevNext} />
-        </div>
-      </SideBar>
-    </SideBarProvider>
+    <>
+      <Header showLogin="true"/>
+      <SideBarProvider config={urlTree.children}>
+        <SideBar ghUrl={ghUrl} treePath={treePath} headings={headings}>
+          <div className="my-5 px-8 pt-5 pb-2 bg-white shadow-md dark:bg-gray-900 rounded-xl max-w-2xl">
+            {/* <div className="prose dark:prose-dark"> */}
+            <MDXRemote {...mdxSource} />
+            {/* <ReactMarkdown remarkPlugins={[withNextImages, slug]} children={content}/> */}
+            {/* </div> */}
+            {/* <div className="prose dark:prose-dark">{content}</div> */}
+            <Cards prevNext={prevNext} />
+          </div>
+        </SideBar>
+      </SideBarProvider>
+    </>    
+
   );
 }
 

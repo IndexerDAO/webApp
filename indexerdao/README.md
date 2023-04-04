@@ -33,3 +33,9 @@ Deploy on Vercel
 The easiest way to deploy your Next.js app is to use the Vercel Platform from the creators of Next.js.
 
 Check out our Next.js deployment documentation for more details.
+
+
+## FAQ
+
+Problem: "Expression produces a union type that is too complex to represent"
+Solution: View > Command Palette > run `TypeScript: Select TypeScript` > Make sure you have `Use workspace version` selected

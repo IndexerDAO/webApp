@@ -80,7 +80,7 @@ export default function Header(props: Props) {
                 w={"240px"}
                 h={"100%"}
                 p={1}
-                src={"assets/ID_logo2.png"}
+                src={"/assets/ID_logo2.png"}
               />
             </Link>
           </HStack>
