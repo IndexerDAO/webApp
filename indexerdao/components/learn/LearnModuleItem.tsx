@@ -20,22 +20,27 @@ export interface ModuleProps {
   covertag: string;
 }
 
-export function LearnModuleItem(props : ModuleProps) {
+export function LearnModuleItem(props: ModuleProps) {
   const [liked, setLiked] = useState(false);
 
   return (
     <Center py={6}>
       <Box
-        w="md"
+        w={"md"}
         rounded={"md"}
         mx={[0, 5]}
         overflow={"hidden"}
         bg="white"
         border={"1px"}
         borderColor="black"
-        boxShadow={useColorModeValue("6px 6px 0 black", "6px 6px 0 cyan")}
+        boxShadow={useColorModeValue("6px 6px 0 black", "6px 6px 0 #B5E853")}
       >
-        <Flex h={"105px"} borderBottom={"1px"} borderColor="black" justifyContent={"center"}>
+        <Flex
+          h={"105px"}
+          borderBottom={"1px"}
+          borderColor="black"
+          justifyContent={"center"}
+        >
           {props.img}
         </Flex>
         <Box p={4}>
@@ -60,28 +65,28 @@ export function LearnModuleItem(props : ModuleProps) {
         </Box>
         <HStack borderTop={"1px"} color="black">
           <Flex
+            as={Link}
+            href={props.link}
             p={4}
             alignItems="center"
+            _hover={{
+              background: "gray.200",
+            }}
             justifyContent={"space-between"}
             roundedBottom={"sm"}
             cursor={"pointer"}
             w="full"
+            borderRight={"1px"}
           >
-            <Link
-              href={props.link}
-              fontSize={"md"}
-              fontWeight={"semibold"}
-            >
-              View Lesson
-            </Link>
+            <Text fontSize={"md"} fontWeight={"semibold"}>
+              Begin
+            </Text>
             <BsArrowUpRight />
           </Flex>
           <Flex
             p={4}
             alignItems="center"
-            justifyContent={"space-between"}
             roundedBottom={"sm"}
-            borderLeft={"1px"}
             cursor="pointer"
             onClick={() => setLiked(!liked)}
           >
