@@ -21,7 +21,7 @@ interface TeamProps {
 
 const Feature = ({ title, text, img }: TeamProps) => {
   return (
-    <Stack align={"center"}>
+    <Stack align={"center"} w={300}>
       <Flex
         w={40}
         h={40}
@@ -34,7 +34,9 @@ const Feature = ({ title, text, img }: TeamProps) => {
         {img}
       </Flex>
       <Text fontWeight={600}>{title}</Text>
-      <Text color={"gray.600"}>{text}</Text>
+      <Text color={"gray.600"} noOfLines={3}>
+        {text}
+      </Text>
     </Stack>
   );
 };
@@ -85,7 +87,7 @@ export default function Team() {
           }
           title={"BrainFried"}
           text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+            "B.S. & M.S. Computer Engineering. Involved in Blockchain Tech 2020. I Love Building and Sharing Ideas!"
           }
         />
         <Feature
