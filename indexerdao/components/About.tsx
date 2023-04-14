@@ -52,7 +52,7 @@ export default function About() {
           <Stack spacing={7}>
             <Text
               textTransform={"uppercase"}
-              color={"blue.500"}
+              color={"blue.550"}
               fontWeight={800}
               fontSize={"lg"}
               bg={useColorModeValue("green.100", "green.700")}
@@ -63,27 +63,27 @@ export default function About() {
               About Us
             </Text>
             <Heading>
-              We are a vibrant and dedicated community of Indexers and
-              technology enthusiasts.
+              We are a vibrant and dedicated community of indexers and
+              technology enthusiasts
             </Heading>
-
-            <Text color={"gray.900"} fontSize={"lg"}>
+           
+            <Text color={"gray.550"} fontSize={"lg"}>
               IndexerDAO is a decentralized autonomous organization (DAO)
-              dedicated to supporting the Indexer community within the Graph
+              dedicated to supporting the indexer community within The Graph
               ecosystem.
             </Text>
 
-            <Text color={"gray.900"} fontSize={"lg"}>
-              Our mission is to empower new and aspiring Indexers with ongoing
+            <Text color={"gray.550"} fontSize={"lg"}>
+              Our mission is to empower new and aspiring indexers with ongoing
               education and project-based learning opportunities, as well as to
               drive innovation in the indexing space through the testing of R&D
               efforts from core developers.
             </Text>
 
-            <Text color={"gray.900"} fontSize={"lg"}>
+            <Text color={"gray.550"} fontSize={"lg"}>
               Our vision is to be a leading DevOps talent incubator for The
               Graph and the broader web3 ecosystem, and to be recognized as the
-              foremost organization for Indexers. With a focus on community
+              foremost organization for indexers. With a focus on community
               building and collaboration, we aim to provide a supportive and
               empowering environment for indexers to develop their skills and
               bring new ideas to the table.
