@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 import {
   Box,
   Flex,
@@ -6,7 +6,7 @@ import {
   HStack,
   Link,
   IconButton,
-  Button,
+  Text,
   Menu,
   MenuButton,
   MenuList,
@@ -17,13 +17,16 @@ import {
   Stack,
   Image,
   useColorMode,
-} from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, AddIcon, MoonIcon } from "@chakra-ui/icons";
+  VStack,
+  LightMode,
+} from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon, AddIcon, MoonIcon } from '@chakra-ui/icons';
+import { FiChevronDown } from 'react-icons/fi';
 
 const Links: NavLink_i[] = [
-  { disp: "Home", linkto: "/" },
-  { disp: "Guides", linkto: "#" },
-  { disp: "About", linkto: "/about" },
+  { disp: 'Home', linkto: '/' },
+  { disp: 'Learn', linkto: 'https://indexdao.gitbook.io/indexerdao/' },
+  { disp: 'About', linkto: '/about' },
 ];
 
 interface NavLink_i {
@@ -35,12 +38,12 @@ const NavLink = ({ disp, linkto }: NavLink_i) => (
   <Link
     px={2}
     py={1}
-    rounded={"md"}
-    color={"gray.50"}
+    rounded={'md'}
+    color={'gray.50'}
     _hover={{
-      textDecoration: "none",
-      color: "black",
-      bg: useColorModeValue("gray.200", "gray.700"),
+      textDecoration: 'none',
+      color: 'black',
+      bg: useColorModeValue('gray.200', 'gray.700'),
     }}
     href={linkto}
   >
@@ -48,55 +51,93 @@ const NavLink = ({ disp, linkto }: NavLink_i) => (
   </Link>
 );
 
-export default function Header() {
+interface Props {
+  showLogin?: Boolean;
+}
+
+export default function Header(props: Props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
+  const color1 = useColorModeValue('white', 'gray.900');
+  const color2 = useColorModeValue('gray.200', 'gray.700');
 
   return (
     <>
-      <Box bg={"#1A365D"} px={10}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+      <Box bg={'#1A365D'} px={10}>
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
-            size={"md"}
+            size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            display={{ md: "none" }}
+            aria-label={'Open Menu'}
+            display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={8} alignItems={"center"}>
+          <HStack spacing={8} alignItems={'center'}>
             <Link href="/">
               <Image
-                alt={"Logo"}
-                fit={"cover"}
-                align={"center"}
-                w={"240px"}
-                h={"100%"}
+                alt={'Logo'}
+                fit={'cover'}
+                align={'center'}
+                w={'240px'}
+                h={'100%'}
                 p={1}
-                src={"assets/ID_logo2.png"}
+                src={'/assets/ID_logo2.png'}
               />
             </Link>
           </HStack>
 
-          <Flex alignItems={"center"}>
+          <Flex alignItems={'center'}>
             <HStack
-              as={"nav"}
+              as={'nav'}
               spacing={4}
-              display={{ base: "none", md: "flex" }}
+              display={{ base: 'none', md: 'flex' }}
             >
-              {Links.map((link) => (
-                <NavLink
-                  key={link.disp}
-                  disp={link.disp}
-                  linkto={link.linkto}
-                />
-              ))}
+              <LightMode>
+                {Links.map((link) => (
+                  <NavLink
+                    key={link.disp}
+                    disp={link.disp}
+                    linkto={link.linkto}
+                  />
+                ))}
+              </LightMode>
+
+              <IconButton
+                variant={'ghost'}
+                aria-label="Toggle Dark Mode"
+                icon={<MoonIcon />}
+                color={useColorModeValue('gray.200', '#B5E853')}
+                onClick={toggleColorMode}
+              />
+
+              {props.showLogin && (
+                <Flex alignItems={'center'}>
+                  <Menu>
+                    <MenuButton
+                      py={2}
+                      transition="all 0.3s"
+                      _focus={{ boxShadow: 'none' }}
+                    >
+                      <HStack>
+                        <Avatar
+                          size={'sm'}
+                          src={'/assets/teamprofile/BrainFried.jpg'}
+                        />
+                        <Box display={{ base: 'none', md: 'flex' }}>
+                          <FiChevronDown />
+                        </Box>
+                      </HStack>
+                    </MenuButton>
+                    <MenuList bg={color1} borderColor={color2}>
+                      <MenuItem>Profile</MenuItem>
+                      <MenuDivider />
+                      <MenuItem>Sign out</MenuItem>
+                    </MenuList>
+                  </Menu>
+                </Flex>
+              )}
             </HStack>
-            <IconButton
-              variant={"ghost"}
-              aria-label="Toggle Dark Mode"
-              icon={<MoonIcon />}
-              onClick={toggleColorMode}
-            />
+
             {/* <Button
                             variant={"solid"}
                             colorScheme={"teal"}
@@ -131,8 +172,8 @@ export default function Header() {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
-            <Stack as={"nav"} spacing={4}>
+          <Box pb={4} display={{ md: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
                 <NavLink
                   key={link.disp}
