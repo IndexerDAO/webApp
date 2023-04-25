@@ -58,9 +58,7 @@ export default function Team() {
             />
           }
           title={'Channon'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-          }
+          text={'Indexer at IndexerDAO'}
         />
         <Feature
           img={
@@ -72,9 +70,7 @@ export default function Team() {
             />
           }
           title={'Slim'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-          }
+          text={'Indexer at IndexerDAO'}
         />
         <Feature
           img={
@@ -87,7 +83,7 @@ export default function Team() {
           }
           title={'BrainFried'}
           text={
-            'B.S. & M.S. Computer Engineering. Involved in Blockchain Tech 2020. I Love Building and Sharing Ideas!'
+            'Computer Engineer. Involved in Blockchain Tech 2020. I Love Building and Sharing Ideas!'
           }
         />
         <Feature
@@ -109,13 +105,11 @@ export default function Team() {
               alt={'Logo'}
               fit={'cover'}
               align={'center'}
-              src={'assets/ID_logo2.png'}
+              src={'assets/teamprofile/payne.jpg'}
             />
           }
           title={'Payne'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-          }
+          text={'Indexer at StakeSquid'}
         />
         <Feature
           img={
@@ -123,13 +117,11 @@ export default function Team() {
               alt={'Logo'}
               fit={'cover'}
               align={'center'}
-              src={'assets/ID_logo2.png'}
+              src={'assets/teamprofile/vince.jpg'}
             />
           }
           title={'Vince | Nodeify'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-          }
+          text={'Indexer at Nodeify'}
         />
         <Feature
           img={
@@ -137,13 +129,11 @@ export default function Team() {
               alt={'Logo'}
               fit={'cover'}
               align={'center'}
-              src={'assets/ID_logo2.png'}
+              src={'assets/teamprofile/kent.jpg'}
             />
           }
           title={'Mac'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-          }
+          text={'Full Stack Boomer - left .NET to bleed on the edge'}
         />
         <Feature
           img={
@@ -155,9 +145,7 @@ export default function Team() {
             />
           }
           title={'Don'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-          }
+          text={'Indexer at IndexerDAO'}
         />
       </SimpleGrid>
     </Box>

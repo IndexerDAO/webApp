@@ -74,7 +74,7 @@ export default function Learning_Advertisement() {
             </Text>
             <br />
             <Text as={'span'} color={useColorModeValue('#1A365D', 'blue.500')}>
-              Enroll Today!
+              Enroll Today! TBA
             </Text>
           </Heading>
           <Text color={useColorModeValue('gray.900', 'gray.200')}>
@@ -92,7 +92,7 @@ export default function Learning_Advertisement() {
           >
             <Button
               as={Link}
-              href="https://indexing101.indexerdao.com/"
+              href="https://discord.gg/gH3hFeMD"
               rounded={'full'}
               size={'lg'}
               fontWeight={'extrabold'}
@@ -101,7 +101,7 @@ export default function Learning_Advertisement() {
               bg={useColorModeValue('#1A365D', 'blue.500')}
               _hover={{ bg: useColorModeValue('blue.500', 'blue.300') }}
             >
-              Learning Series
+              Join Discord
             </Button>
           </Stack>
         </Stack>
