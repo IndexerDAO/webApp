@@ -25,7 +25,7 @@ import { FiChevronDown } from "react-icons/fi";
 
 const Links: NavLink_i[] = [
 	{ disp: "Home", linkto: "/" },
-	{ disp: "Docs", linkto: "https://docs.gitbook.io/indexerdao/" },
+	{ disp: "Docs", linkto: "https://docs.indexerdao.com/" },
 	{ disp: "About", linkto: "/about" },
 ];
 
